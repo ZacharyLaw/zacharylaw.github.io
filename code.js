@@ -1,4 +1,5 @@
 function doGet() {
+  console.log(req)
   return html('main')
 }
 function html(filename){
