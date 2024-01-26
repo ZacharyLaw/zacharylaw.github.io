@@ -3,7 +3,7 @@
   <script>
    path=window.location.pathname=='/'?'':window.location.pathname;
 
-   url=!path.startsWith('/dev')?"https://script.google.com/macros/s/AKfycbx5gx1u8Wk88QP1I66nJlCX26EZcQ2wgG9gN6Ov5mc/exec":"https://script.google.com/macros/s/AKfycbx5gx1u8Wk88QP1I66nJlCX26EZcQ2wgG9gN6Ov5mc/dev"
+   url=!path.startsWith('/dev')?"https://script.google.com/macros/s/AKfycbx5gx1u8Wk88QP1I66nJlCX26EZcQ2wgG9gN6Ov5mc/exec":"https://script.google.com/macros/s/AKfycbx5gx1u8Wk88QP1I66nJlCX26EZcQ2wgG9gN6Ov5mc/exec"
    path=!path.startsWith('/dev')?path:path.substring(4)
      document.getElementById("f").src = (url 
     + path + window.location.search).replace('exec/','exec')
