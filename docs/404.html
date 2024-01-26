@@ -5,7 +5,8 @@
 
    url=!path.startsWith('/dev')?"https://script.google.com/macros/s/AKfycbwUc8j3SWweXEx9acInrRGLJiKxkAw322V-kNefMzrK4NuKhCUIaBYm6o-Y8C4UQ25g/exec":"https://script.google.com/macros/s/AKfycbx5gx1u8Wk88QP1I66nJlCX26EZcQ2wgG9gN6Ov5mc/exec"
    path=!path.startsWith('/dev')?path:path.substring(4)
-   src=(url + path + window.location.search).replace('exec/','exec')
+   path=!path.endsWith('/')?path:path.slice(0, -1)
+   src=url + path + window.location.search
    console.log(src)
      document.getElementById("f").src = src
 
