@@ -1,12 +1,12 @@
 <body style=margin:0>
   <iframe id=f width=100% height=100% frameborder=0 margin=0>Loading...</iframe>
-  <script>document.getElementById("f").src = ("https://script.google.com/macros/s/AKfycbx5gx1u8Wk88QP1I66nJlCX26EZcQ2wgG9gN6Ov5mc/exec" 
-    + window.location.pathname + window.location.search).replace('exec/','exec')
-  console.log([window.location.pathname, window.location.search])
-  console.log("https://script.google.com/macros/s/AKfycbx5gx1u8Wk88QP1I66nJlCX26EZcQ2wgG9gN6Ov5mc/exec" 
-  + (window.location.pathname==='/'?'':window.location.pathname) + window.location.search)
-  console.log('how')
-  console.log(("https://script.google.com/macros/s/AKfycbx5gx1u8Wk88QP1I66nJlCX26EZcQ2wgG9gN6Ov5mc/exec" 
-  + window.location.pathname + window.location.search).replace('exec/','exec'))
+  <script>
+   path=window.location.pathname=='/'?'':window.location.pathname;
+
+   url=!path.startsWith('/dev')?"https://script.google.com/macros/s/AKfycbx5gx1u8Wk88QP1I66nJlCX26EZcQ2wgG9gN6Ov5mc/exec":"https://script.google.com/macros/s/AKfycbx5gx1u8Wk88QP1I66nJlCX26EZcQ2wgG9gN6Ov5mc/dev"
+   path=!path.startsWith('/dev')?path:path.substring(4)
+     document.getElementById("f").src = (url 
+    + path + window.location.search).replace('exec/','exec')
+
   </script>
 </body>
