@@ -2,7 +2,6 @@ function doGet(req) {
   console.log(req)
   console.log('how are you not saying hai')
   Logger.log('prod no log?')
-  if(req.pathInfo)
   if(req.parameter.page=='map') return html('map')
   else return html('main')
 }
