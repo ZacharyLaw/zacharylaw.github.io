@@ -1,5 +1,0 @@
-- Zachary Law
-  - Skills
-  - Technical Skills
-  - Education
-  - Certificate

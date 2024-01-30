@@ -1,4 +1,9 @@
 <html>
-  <?!= include('tree'); ?>
-  
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  Tree
+  <script>
+    profile=JSON.parse(`<?=grab('profile')?>`.slice(1,-1)).filter(r=>r.some(i=>i.trim()!==""));
+    console.log(profile)
+    $('body').html(profile)
+  </script>
 </html>
