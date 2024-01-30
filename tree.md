@@ -2,3 +2,4 @@
   - Skills
   - Technical Skills
   - Education
+  - Certificate
